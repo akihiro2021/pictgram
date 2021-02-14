@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get link" do
-    get pages_link_url
+  test "should get test" do
+    get pages_test_url
     assert_response :success
   end
 

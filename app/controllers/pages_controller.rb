@@ -1,4 +1,4 @@
 class PagesController < ApplicationController
-  def link
+  def test
   end
 end
