@@ -10,9 +10,18 @@ Rails.application.routes.draw do
   
   resources :users
   resources :topics
+  resources :comments
   
   get 'favorites/index'
   post '/favorites', to: 'favorites#create'
   delete '/favorites',  to: 'favorites#destroy'
+  
+  get 'comments/new'
+  post '/comments', to: 'comments#create'
+  delete '/comments', to: 'comment#destroy'
+  
+  resources :topics do
+    resources :comments
+  end  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
